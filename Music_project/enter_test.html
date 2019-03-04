@@ -16,7 +16,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    
+        
     <!--slider-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.1/nouislider.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.1/nouislider.min.js"></script>
@@ -24,19 +24,31 @@
     <style type="text/css">
         @import url(https://fonts.googleapis.com/css?family=Laila:b);
         @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:Semi-Bold);
+        @import url(https://fonts.googleapis.com/css?family=PT+Serif:Bold);
+        
         *{
             box-sizing: border-box;
         }
 
-
+        body{
+            background-color: black;
+        }
         .col-xs-12.header div{
-            height: 100px;
+            height: 7em;
         }
         .col-xs-12.content div{
-            height: 800px;
+            height: 238em;
+            overflow: hidden;
         }
-        .col-xs-12.player div{
-            height: 230px;
+        
+        .col-xs-12.player{
+            height: 10em;
+            position: fixed;
+            bottom: 0px;
+            left:0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d2ff52+0,91e842+100;Neon */
             /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e4efc0+0,abbd73+100;Olive+3D+%232 */
             background: #e4efc0; /* Old browsers */
@@ -46,149 +58,88 @@
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4efc0', endColorstr='#abbd73',GradientType=0 ); /* IE6-9 */
         }
 
-
-
-        .col-xs-2.logo{
-            line-height: 100px;
-
-        }
-        .col-xs-2.logo img{
-            vertical-align: middle;
-            
+        .row.content{
+            display: flex;
+            align-items: stretch;
         }
 
 
+        .row.header{
+            background-color: #00004d;
+        }
 
+        
+        .col-xs-2.logo,.col-xs-6.qoute,.col-xs-4.log_button{
+            display:flex;
+            align-items: center;
+
+        }
         .col-xs-6.qoute{
-            text-align: center;
-            font-family: Laila;
-            line-height:100px;
-            vertical-align: middle;
-            font-size: 40px;
-            color: orange;
+            justify-content: center;
+        }
+        .col-xs-4.log_button{
+            justify-content: flex-end;
+        }
+        
+        .btn.btn-outline-primary{
+            font-weight: 600;
+            color:  #0066ff;
+            border-color: #0066ff;
+            background-color: white;
+        }
+        .btn.btn-outline-primary:hover{
+            font-weight: 600;
+            color: #ffffff;
+            background-color:  #0066ff;
         }
 
 
+        
 
-        .col-xs-4.log_button input{
-            width: 85px;
-            height: 42px;
-            float:right;
-            position: relative;
-            margin-top: 34px;
-            border-style: none;
-            font-size: 27px;
-            font-family: Source Sans Pro, 'sans serif';
-            text-decoration: underline;
-            color: lightblue;
+        .row.player_row{
+            height: 100%;
+            width: 100%;
+            display:flex;
+            align-items: center;
         }
-
-        .col-xs-5.bar_option {
-            padding: 0px;
-        }
-        .col-xs-5.bar_option div{
-            height: 115px;
-            margin: 0px;
-            padding: 0px;
-            background: transparent;
-        }
-
         .col-xs-3.song_details{
-            text-align: center;
-        }
-        .col-xs-3.song_details h3{
-            margin-top: 30px;
-            height:auto;
-        }
+            display:flex;
+            align-items: center;
+            font-family: PT Serif;
 
-        .col-xs-3.basic_control #previous{
-            position: relative;
-            top:75px;
-            left:115px;
-        }
-
-        .col-xs-3.basic_control #play{
-            position: relative;
-            top:80px;
-            left:125px;
         }
         
-        .col-xs-3.basic_control #next{
-            position: relative;
-            top:75px;
-            left:135px;
-        }
-        .col-xs-3.basic_control #previous:active {
-            position: relative;
-            top:78px;
-            left:118px;
-        }
-        .col-xs-3.basic_control #play:active {
-            position: relative;
-            top:83px;
-            left:128px;
-        }
-        .col-xs-3.basic_control #next:active {
-            position: relative;
-            top:78px;
-            left:138px;   
+        .row.left_player_content{
+            display:flex;
+            align-items: center;   
         }
 
 
-        .col-xs-3.repeat_option input,.col-xs-3.like_option input,.col-xs-3.shuffle_option input,.col-xs-3.mute input{
-            margin-left:42%;
 
+        .row.time_bar{
+            font-family: PT Serif, "sans serif"
+            font-size: 1.5em;
+            font-weight: bold; 
         }
-        .col-xs-3.repeat_option input:active{
-            position: relative;
-            top:3px;
-            left:3px;
-        }
-
-        .col-xs-3.like_option input:active{
-            position: relative;
-            top:3px;
-            left:3px;
+        #slider-handles{
+            margin-right: 1px;
+            margin-left: 1px;
         }
 
-        .col-xs-3.shuffle_option input:active{
-            position: relative;
-            top:3px;
-            left:3px;
+
+        .row.basic_control{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 6px;
         }
-        
-        .col-xs-3.mute input:active{
-            position:relative;
-            top:3px;
-            left:3px;
+        .col-xs-2.shuffle,.col-xs-2.previous,.col-xs-2.play,.col-xs-2.next,.col-xs-2.repeat{
+            display: flex;
+            align-items: center;
+            justify-content: center;   
         }
-        
 
 
-        #default_bar{
-            position:relative;
-            margin-left: 100px;
-            width:770px;
-            margin-top: 50px;
-            height:1.2em;
-            background-color: darkgray;
-        }
-        #progress_bar{
-            position: absolute
-            margin-left:100px;
-            width:70px;
-            height:1.2em;
-            background-color: blue;
-        }
-
-        #progress_time{
-            margin-left: 80px;
-            margin-top: 3px;
-        }
-        #end_time{
-            float:right;
-            margin-right: 80px;
-        }
 
     </style>
 
@@ -200,16 +151,17 @@
 
             <!--header-->
             <div class="col-xs-12 header">
-                <div class="row">
-                    <div class="col-xs-2 logo" style="background-color: green">
+                <div class="row header">
+                    <div class="col-xs-2 logo" >
                         <img src="logo.jpg" height="80px" width="80px">
                     </div>
-                    <div class="col-xs-6 qoute" style="background-color: green">
-                        <h3>"Music is an out burst of the soul" -Muktan<h3>
+                    <div class="col-xs-6 qoute" >
+                        <h4 style="font-family: Laila; color:  #ffb3ff">"Music is an out-burst of the soul" -Muktan<h4>
                     </div>
-                    <div class="col-xs-4 log_button" style="background-color: green">
-                        <input type="button" name="login" value="Log-in" style="background-color: green">
-                        <input type="button" name="sign-in" value="sign-in" style="background-color: green">
+                    <div class="col-xs-4 log_button">
+                        <input type="button" class="btn btn-outline-primary" name="login" value="Log-in"  >
+                        &nbsp&nbsp&nbsp
+                        <input type="button" name="sign-up" value="sign-up" class="btn btn-outline-primary">
                     </div>
                 </div>
             </div>
@@ -217,100 +169,159 @@
 
             <!--content-->
             <div class="col-xs-12 content">
-                <div class="row">
-                    <div class="col-xs-2" style="background-color: lightgreen">
-                        hello
-                    </div>
-                    <div class="col-xs-8" style="background-color: lightblue">
-                        blue
-                    </div>
-                    <div class="col-xs-2" style="background-color: lightgreen">
-                        green
-                    </div>
+                <div class="row content">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                      </li>
+                    </ul>
                 </div>
             </div>
 
 
-            <!--Slider row-->
-            <div class="col-xs-12" style="background-color: red height: 10px">
-                <div class="row" id="slider-handles" style="background-color: red height: 20px">
-                    
-                    <script>
-                        var handlesSlider = document.getElementById('slider-handles');
-                            noUiSlider.create(handlesSlider, {
-                            start: [0],
-                            connect: [true, false],
-                            range: {
-                                'min': [0],
-                                'max': [10000]
-                            }
-                        });
-                    </script>
-                </div>
-            </div>
 
-            <!--player-->
             <div class="col-xs-12 player">
-                <div class="row">
+                <div class="row player_row">
+                    
+
                     <div class="col-xs-3 song_details">
-                        
-                        <h3 style="font-family:Source Sans Pro, 'sans serif' "><u><strong>Song Details:</strong></u></h3>
-                        <h4><strong>Song name:</strong>"name"</h4>
-                        <h4><strong>Song artist:</strong>"name"</h4>
-                        <h4><strong>Song album:</strong>"name"</h4>
-                        <h4><strong>Song duration:</strong>"duration"</h4>
-                        
-                    </div>
+                        <div class="row left_player_content">
+                            <div class="col-xs-4 song_icon">
+                                <img src="img_404.jpg" class="img-thumbnail rounded mx-auto d-block" name="song_icon" width="100em" height="100em">
+                            </div>
 
-
-                    <div class="col-xs-3 basic_control">
-                        <input id="previous" type="image" src="previous.png" name="prev" width="55px" height="55px" onclick="sound.pause()">
-                        <input id="play" type="image" src="play.png" name="play_pause" width="60px" height="70px" onclick="sound.play('abc')">
-                        <input id="next" type="image" src="next.png" name="next" width="55px" height="55px">
-                    </div>
-
-
-                    <div class="col-xs-5 bar_option">
-                        <div class="col-xs-12 row bar_and_option">
-                            
-
-                            <div class="col-xs-12 bar">
-
-                                <!--<div id="default_bar">
-                                    <div id="progress_bar">
-                                        
+                            <div class="col-xs-4 song_name_artist">
+                                <div class="row">
+                                    <div class="col-xs-12 song_name">
+                                        <h4>Song xyz</h4>
                                     </div>
+                                    <div class="col-xs-12 song_artist">
+                                        <h4>Song artist: xyz</h4>
+                                    </div>    
                                 </div>
-                                <div id="time">
-                                    <span id="progress_time">0:00</span>
-                                    <span id="end_time">0:00</span>
-                                </div>-->
-                                
-
                             </div>
-
-
-                            <div class="col-xs-3 repeat_option" >
-                                <input type="image" src="repeat.png" name="repeat" width="55px" height="55px">
-                            </div>
-                            
-
-                            <div class="col-xs-3 like_option">
-                                <input type="image" src="like.png" name="like" width="55px" height="55px">
-                            </div>
-                            
-
-                            <div class="col-xs-3 shuffle_option">
-                                <input type="image" src="shuffle.png" name="shuffle" width="55px" height="55px">
-                            </div>
-                            
-
-                            <div class="col-xs-3 mute" >
-                                <input type="image" src="mute.png" name="shuffle" width="55px" height="55px">
+                            <div class="col-xs-4 like">
+                                <input type="image" src="like.png"  name="like" width="35em" height="35em" >
                             </div>
                         </div>
-                        
                     </div>
+
+
+                    <div class="col-xs-6 bar_and_control">
+                        <div class="row center_player_content">
+                            <div class="col-xs-12 progress_bar">
+                                
+                                <div class="row time_bar">
+                                    <div class="col-xs-1 start_time">
+                                        0:00
+                                    </div>
+                                    <div class="col-xs-10 slider">
+                                        <div class="row" id="progress-slider-handles">
+                                            <script>
+                                                var handlesSlider = document.getElementById('progress-slider-handles');
+                                                    noUiSlider.create(handlesSlider, {
+                                                    start: [0],
+                                                    connect: [true, false],
+                                                    range: {
+                                                        'min': [0],
+                                                        'max': [10000]
+                                                    }
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-1 end_time">
+                                        0:00
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-xs-12 basic_controls">
+                                <div class="row basic_control">
+                                    <div class="col-xs-1">
+                                        
+                                    </div>
+
+                                    <div class="col-xs-2 shuffle">
+                                        <input type="image" src="shuffle.png" name="shuffle" width="25em" height="25em">
+                                    </div>
+                                    <div class="col-xs-2 previous">
+                                        <input id="previous" type="image" src="previous.png" name="prev" width="35em" height="35em" onclick="sound.pause()">
+                                    </div>
+                                    <div class="col-xs-2 play">
+                                        <input id="play" type="image" src="play.png" name="play_pause" width="40px" height="50px" onclick="sound.play()">
+                                    </div>
+                                    <div class="col-xs-2 next">
+                                        <input id="next" type="image" src="next.png" name="next" width="35px" height="35px">
+                                    </div>
+                                    <div class="col-xs-2 repeat">
+                                        <input type="image" src="repeat.png" name="repeat" width="25px" height="25px">
+                                    </div>
+
+                                    <div class="col-xs-1">
+                                                
+                                    </div>
+                                    
+                                    
+                                </div>    
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                    <!--
+                        
+                        <input id="previous" type="image" src="previous.png" name="prev" width="55px" height="55px" onclick="sound.pause()">
+                        <input id="play" type="image" src="play.png" name="play_pause" width="60px" height="70px" onclick="sound.play()">
+                        <input id="next" type="image" src="next.png" name="next" width="55px" height="55px">
+                    -->
+                    <div class="col-xs-3 volume_queue">
+                        <div class="row right_player_content">
+                            <div class="col-xs-2 queue">
+                                <div class="row queue">
+                                    <input id="queue" type="image" src="playlist.png" name="playlist" width="35px" height="35px">             
+                                </div>
+                            </div>
+                            <div class="col-xs-2 volume">
+                                <div class="row volume">
+                                    <input id="volume" type="image" src="mute.png" name="playlist" width="35px" height="35px">             
+                                </div>
+                            </div>
+                            <div class="col-xs-8 slider">
+                                <div class="row" id="volume-slider-handles">
+                                    <script>
+                                        var handlesSlider = document.getElementById('volume-slider-handles');
+                                            noUiSlider.create(handlesSlider, {
+                                            start: [0],
+                                            connect: [true, false],
+                                            range: {
+                                                'min': [0],
+                                                'max': [10000]
+                                            }
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
                     
                 </div>
             </div>
@@ -320,9 +331,7 @@
     <script>
     var sound = new Howl({
       src: ['sample.mp3'],
-      sprite: {
-        abc: [4000, 7000]
-      },
+      loop: true,
       volume: 0.8
     });
     </script>

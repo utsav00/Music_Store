@@ -1,0 +1,93 @@
+.col-xs-3.song_details h3{
+            margin-top: 30px;
+            height:auto;
+        }
+
+        .col-xs-3.basic_control #previous{
+            position: relative;
+            top:75px;
+            left:115px;
+        }
+
+        .col-xs-3.basic_control #play{
+            position: relative;
+            top:80px;
+            left:125px;
+        }
+        
+        .col-xs-3.basic_control #next{
+            position: relative;
+            top:75px;
+            left:135px;
+        }
+        .col-xs-3.basic_control #previous:active {
+            position: relative;
+            top:78px;
+            left:118px;
+        }
+        .col-xs-3.basic_control #play:active {
+            position: relative;
+            top:83px;
+            left:128px;
+        }
+        .col-xs-3.basic_control #next:active {
+            position: relative;
+            top:78px;
+            left:138px;   
+        }
+
+
+        .col-xs-3.repeat_option input,.col-xs-3.like_option input,.col-xs-3.shuffle_option input,.col-xs-3.mute input{
+            margin-left:42%;
+
+        }
+        .col-xs-3.repeat_option input:active{
+            position: relative;
+            top:3px;
+            left:3px;
+        }
+
+        .col-xs-3.like_option input:active{
+            position: relative;
+            top:3px;
+            left:3px;
+        }
+
+        .col-xs-3.shuffle_option input:active{
+            position: relative;
+            top:3px;
+            left:3px;
+        }
+        
+        .col-xs-3.mute input:active{
+            position:relative;
+            top:3px;
+            left:3px;
+        }
+        
+
+
+        #default_bar{
+            position:relative;
+            margin-left: 100px;
+            width:770px;
+            margin-top: 50px;
+            height:1.2em;
+            background-color: darkgray;
+        }
+        #progress_bar{
+            position: absolute
+            margin-left:100px;
+            width:70px;
+            height:1.2em;
+            background-color: blue;
+        }
+
+        #progress_time{
+            margin-left: 80px;
+            margin-top: 3px;
+        }
+        #end_time{
+            float:right;
+            margin-right: 80px;
+        }
