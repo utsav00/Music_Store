@@ -1,3 +1,39 @@
+.col-xs-2.logo{
+            line-height: 100px;
+
+        }
+        .col-xs-2.logo img{
+            vertical-align: middle;
+            
+        }
+
+
+
+        .col-xs-6.qoute{
+            text-align: center;
+            font-family: Laila;
+            line-height:100px;
+            vertical-align: middle;
+            font-size: 40px;
+            color: orange;
+        }
+
+
+
+        .col-xs-4.log_button input{
+            width: 85px;
+            height: 42px;
+            float:right;
+            position: relative;
+            margin-top: 34px;
+            border-style: none;
+            font-size: 27px;
+            font-family: Source Sans Pro, 'sans serif';
+            text-decoration: underline;
+            color: lightblue;
+        }
+
+
 .col-xs-3.song_details h3{
             margin-top: 30px;
             height:auto;

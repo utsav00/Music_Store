@@ -37,7 +37,7 @@
             height: 7em;
         }
         .col-xs-12.content div{
-            height: 238em;
+            
             overflow: hidden;
         }
         
@@ -138,10 +138,16 @@
             align-items: center;
             justify-content: center;   
         }
-
+        input:active{
+            box-shadow: 5px 5px 3px #888888;
+        }
+        
 
 
     </style>
+    <script type="text/javascript">
+
+    </script>
 
 </head>
 <body>
@@ -153,10 +159,10 @@
             <div class="col-xs-12 header">
                 <div class="row header">
                     <div class="col-xs-2 logo" >
-                        <img src="logo.jpg" height="80px" width="80px">
+                        <img src="Image/logo.jpg" height="80px" width="80px">
                     </div>
                     <div class="col-xs-6 qoute" >
-                        <h4 style="font-family: Laila; color:  #ffb3ff">"Music is an out-burst of the soul" -Muktan<h4>
+                        <h4 style="font-family: Laila; color:  #ffb3ff">"Music is an out-burst of the soul" -Muktan</h4>
                     </div>
                     <div class="col-xs-4 log_button">
                         <input type="button" class="btn btn-outline-primary" name="login" value="Log-in"  >
@@ -170,20 +176,30 @@
             <!--content-->
             <div class="col-xs-12 content">
                 <div class="row content">
-                    <ul class="nav flex-column">
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                      </li>
-                    </ul>
+                    <div class="col-xs-1 side-bar">
+                        <div class="row side-bar">    
+                            <ul class="nav flex-column">
+                              <li class="nav-item">
+                                <a class="nav-link active" href="#">Active</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-11 main-content">
+                        <div class="row main-content">
+                            
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
 
@@ -196,7 +212,7 @@
                     <div class="col-xs-3 song_details">
                         <div class="row left_player_content">
                             <div class="col-xs-4 song_icon">
-                                <img src="img_404.jpg" class="img-thumbnail rounded mx-auto d-block" name="song_icon" width="100em" height="100em">
+                                <img src="Image/img_404.jpg" class="img-thumbnail rounded mx-auto d-block" name="song_icon" width="100em" height="100em">
                             </div>
 
                             <div class="col-xs-4 song_name_artist">
@@ -210,7 +226,7 @@
                                 </div>
                             </div>
                             <div class="col-xs-4 like">
-                                <input type="image" src="like.png"  name="like" width="35em" height="35em" >
+                                <input type="image" src="Image/like.png"  name="like" width="35em" height="35em" >
                             </div>
                         </div>
                     </div>
@@ -256,19 +272,36 @@
                                     </div>
 
                                     <div class="col-xs-2 shuffle">
-                                        <input type="image" src="shuffle.png" name="shuffle" width="25em" height="25em">
+                                        <input type="image" src="Image/shuffle.png" name="shuffle" width="25em" height="25em">
                                     </div>
                                     <div class="col-xs-2 previous">
-                                        <input id="previous" type="image" src="previous.png" name="prev" width="35em" height="35em" onclick="sound.pause()">
+                                        <input id="previous" type="image" src="Image/previous.png" name="prev" width="35em" height="35em">
                                     </div>
                                     <div class="col-xs-2 play">
-                                        <input id="play" type="image" src="play.png" name="play_pause" width="40px" height="50px" onclick="sound.play()">
+                                        <input id="play" type="image" src="Image/play.png" name="play_pause" width="40px" height="50px" onclick="pause_play()">
+                                        
+                                        <input id="pause" type="image" src="Image/pause.png" name="play_pause" width="40px" height="50px" onclick="pause_play()" style="display: none;">
+                                        <script type="text/javascript">
+                                            $('#play').click(function(){
+                                                document.getElementById("play").style.display = 'none';
+                                                document.getElementById("pause").style.display = 'block';
+                                                sound.play();
+
+                                            });
+
+                                            $('#pause').click(function(){
+                                                document.getElementById("pause").style.display = 'none';
+                                                document.getElementById("play").style.display = 'block';
+                                                sound.pause();
+                                            });
+                                            
+                                        </script>
                                     </div>
                                     <div class="col-xs-2 next">
-                                        <input id="next" type="image" src="next.png" name="next" width="35px" height="35px">
+                                        <input id="next" type="image" src="Image/next.png" name="next" width="35px" height="35px">
                                     </div>
                                     <div class="col-xs-2 repeat">
-                                        <input type="image" src="repeat.png" name="repeat" width="25px" height="25px">
+                                        <input type="image" src="Image/repeat.png" name="repeat" width="25px" height="25px">
                                     </div>
 
                                     <div class="col-xs-1">
@@ -293,12 +326,12 @@
                         <div class="row right_player_content">
                             <div class="col-xs-2 queue">
                                 <div class="row queue">
-                                    <input id="queue" type="image" src="playlist.png" name="playlist" width="35px" height="35px">             
+                                    <input id="queue" type="image" src="Image/playlist.png" name="playlist" width="35px" height="35px">             
                                 </div>
                             </div>
                             <div class="col-xs-2 volume">
                                 <div class="row volume">
-                                    <input id="volume" type="image" src="mute.png" name="playlist" width="35px" height="35px">             
+                                    <input id="volume" type="image" src="Image/mute.png" name="playlist" width="35px" height="35px">             
                                 </div>
                             </div>
                             <div class="col-xs-8 slider">
@@ -331,9 +364,25 @@
     <script>
     var sound = new Howl({
       src: ['sample.mp3'],
-      loop: true,
-      volume: 0.8
+      
     });
+    
+    sound.on('end', function(){
+        var s = new Howl({
+          src: ['M4.mp3'],
+          
+        });
+        s.play();    
+    });
+
+     
+    // sound.onend(){
+    //     sound = new Howl({
+    //       src: ['M4.mp3']
+          
+    //     });
+    //     sound.play();
+    // };
     </script>
 </body>
 </html>
