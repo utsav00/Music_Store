@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- this will help in opening in mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome</title>
+
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        
+    <!--slider-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.1/nouislider.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.1/nouislider.min.js"></script>
+
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Laila:b);
+        @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:Semi-Bold);
+        @import url(https://fonts.googleapis.com/css?family=PT+Serif:Bold);
+        
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: black;
+        }
+        .col-xs-12.header div{
+            height: 7em;
+        }
+        .col-xs-12.content div{
+            
+            overflow: hidden;
+        }
+        
+        .col-xs-12.player{
+            height: 10em;
+            position: fixed;
+            bottom: 0px;
+            left:0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d2ff52+0,91e842+100;Neon */
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e4efc0+0,abbd73+100;Olive+3D+%232 */
+            background: #e4efc0; /* Old browsers */
+            background: -moz-linear-gradient(top, #e4efc0 0%, #abbd73 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #e4efc0 0%,#abbd73 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #e4efc0 0%,#abbd73 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4efc0', endColorstr='#abbd73',GradientType=0 ); /* IE6-9 */
+        }
+
+        .row.content{
+            display: flex;
+            align-items: stretch;
+        }
+
+
+        .row.header{
+            background-color: #00004d;
+        }
+
+        
+        .col-xs-2.logo,.col-xs-6.qoute,.col-xs-4.log_button{
+            display:flex;
+            align-items: center;
+
+        }
+        .col-xs-6.qoute{
+            justify-content: center;
+        }
+        .col-xs-4.log_button{
+            justify-content: flex-end;
+        }
+        
+        .btn.btn-outline-primary{
+            font-weight: 600;
+            color:  #0066ff;
+            border-color: #0066ff;
+            background-color: white;
+        }
+        .btn.btn-outline-primary:hover{
+            font-weight: 600;
+            color: #ffffff;
+            background-color:  #0066ff;
+        }
+
+
+        
+
+        .row.player_row{
+            height: 100%;
+            width: 100%;
+            display:flex;
+            align-items: center;
+        }
+        .col-xs-3.song_details{
+            display:flex;
+            align-items: center;
+            font-family: PT Serif;
+
+        }
+        
+        .row.left_player_content{
+            display:flex;
+            align-items: center;   
+        }
+
+
+
+        .row.time_bar{
+            font-family: PT Serif, "sans serif"
+            font-size: 1.5em;
+            font-weight: bold; 
+        }
+        #slider-handles{
+            margin-right: 1px;
+            margin-left: 1px;
+        }
+
+
+        .row.basic_control{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 6px;
+        }
+        .col-xs-2.shuffle,.col-xs-2.previous,.col-xs-2.play,.col-xs-2.next,.col-xs-2.repeat{
+            display: flex;
+            align-items: center;
+            justify-content: center;   
+        }
+        input:active{
+            box-shadow: 5px 5px 3px #888888;
+        }
+        
+
+
+    </style>
+    <script type="text/javascript">
+
+    </script>
+
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--header-->
+            <div class="col-xs-12 header">
+                <div class="row header">
+                    <div class="col-xs-2 logo" >
+                        <img src="Image/logo.jpg" height="80px" width="80px">
+                    </div>
+                    <div class="col-xs-6 qoute" >
+                        <h4 style="font-family: Laila; color:  #ffb3ff">"Music is an out-burst of the soul" -Muktan</h4>
+                    </div>
+                    <div class="col-xs-4 log_button">
+                        <input type="button" class="btn btn-outline-primary" name="login" value="Log-in"  >
+                        &nbsp&nbsp&nbsp
+                        <input type="button" name="sign-up" value="sign-up" class="btn btn-outline-primary">
+                    </div>
+                </div>
+            </div>
+
+
+            <!--content-->
+            <div class="col-xs-12 content">
+                <div class="row content">
+                    <div class="col-xs-1 side-bar">
+                        <div class="row side-bar">    
+                            <ul class="nav flex-column">
+                              <li class="nav-item">
+                                <a class="nav-link active" href="#">Active</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-11 main-content">
+                        <div class="row main-content">
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-xs-12 player">
+                <div class="row player_row">
+                    
+
+                    <div class="col-xs-3 song_details">
+                        <div class="row left_player_content">
+                            <div class="col-xs-4 song_icon">
+                                <img src="Image/img_404.jpg" class="img-thumbnail rounded mx-auto d-block" name="song_icon" width="100em" height="100em">
+                            </div>
+
+                            <div class="col-xs-4 song_name_artist">
+                                <div class="row">
+                                    <div class="col-xs-12 song_name">
+                                        <h4>Song xyz</h4>
+                                    </div>
+                                    <div class="col-xs-12 song_artist">
+                                        <h4>Song artist: xyz</h4>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="col-xs-4 like">
+                                <input type="image" src="Image/like.png"  name="like" width="35em" height="35em" >
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xs-6 bar_and_control">
+                        <div class="row center_player_content">
+                            <div class="col-xs-12 progress_bar">
+                                
+                                <div class="row time_bar">
+                                    <div class="col-xs-1 start_time">
+                                        0:00
+                                    </div>
+                                    <div class="col-xs-10 slider">
+                                        <div class="row" id="progress-slider-handles">
+                                            <script>
+                                                var handlesSlider = document.getElementById('progress-slider-handles');
+                                                    noUiSlider.create(handlesSlider, {
+                                                    start: [0],
+                                                    connect: [true, false],
+                                                    range: {
+                                                        'min': [0],
+                                                        'max': [10000]
+                                                    }
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-1 end_time">
+                                        0:00
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-xs-12 basic_controls">
+                                <div class="row basic_control">
+                                    <div class="col-xs-1">
+                                        
+                                    </div>
+
+                                    <div class="col-xs-2 shuffle">
+                                        <input type="image" src="Image/shuffle.png" name="shuffle" width="25em" height="25em">
+                                    </div>
+                                    <div class="col-xs-2 previous">
+                                        <input id="previous" type="image" src="Image/previous.png" name="prev" width="35em" height="35em">
+                                    </div>
+                                    <div class="col-xs-2 play">
+                                        <input id="play" type="image" src="Image/play.png" name="play_pause" width="40px" height="50px" onclick="pause_play()">
+                                        
+                                        <input id="pause" type="image" src="Image/pause.png" name="play_pause" width="40px" height="50px" onclick="pause_play()" style="display: none;">
+                                        <script type="text/javascript">
+                                            $('#play').click(function(){
+                                                document.getElementById("play").style.display = 'none';
+                                                document.getElementById("pause").style.display = 'block';
+                                                sound.play();
+
+                                            });
+
+                                            $('#pause').click(function(){
+                                                document.getElementById("pause").style.display = 'none';
+                                                document.getElementById("play").style.display = 'block';
+                                                sound.pause();
+                                            });
+                                            
+                                        </script>
+                                    </div>
+                                    <div class="col-xs-2 next">
+                                        <input id="next" type="image" src="Image/next.png" name="next" width="35px" height="35px">
+                                    </div>
+                                    <div class="col-xs-2 repeat">
+                                        <input type="image" src="Image/repeat.png" name="repeat" width="25px" height="25px">
+                                    </div>
+
+                                    <div class="col-xs-1">
+                                                
+                                    </div>
+                                    
+                                    
+                                </div>    
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                    <!--
+                        
+                        <input id="previous" type="image" src="previous.png" name="prev" width="55px" height="55px" onclick="sound.pause()">
+                        <input id="play" type="image" src="play.png" name="play_pause" width="60px" height="70px" onclick="sound.play()">
+                        <input id="next" type="image" src="next.png" name="next" width="55px" height="55px">
+                    -->
+                    <div class="col-xs-3 volume_queue">
+                        <div class="row right_player_content">
+                            <div class="col-xs-2 queue">
+                                <div class="row queue">
+                                    <input id="queue" type="image" src="Image/playlist.png" name="playlist" width="35px" height="35px">             
+                                </div>
+                            </div>
+                            <div class="col-xs-2 volume">
+                                <div class="row volume">
+                                    <input id="volume" type="image" src="Image/mute.png" name="playlist" width="35px" height="35px">             
+                                </div>
+                            </div>
+                            <div class="col-xs-8 slider">
+                                <div class="row" id="volume-slider-handles">
+                                    <script>
+                                        var handlesSlider = document.getElementById('volume-slider-handles');
+                                            noUiSlider.create(handlesSlider, {
+                                            start: [0],
+                                            connect: [true, false],
+                                            range: {
+                                                'min': [0],
+                                                'max': [10000]
+                                            }
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script>
+    <script>
+    var sound = new Howl({
+      src: ['sample.mp3'],
+      
+    });
+    
+    sound.on('end', function(){
+        var s = new Howl({
+          src: ['M4.mp3'],
+          
+        });
+        s.play();    
+    });
+
+     
+    // sound.onend(){
+    //     sound = new Howl({
+    //       src: ['M4.mp3']
+          
+    //     });
+    //     sound.play();
+    // };
+    </script>
+</body>
+</html>
